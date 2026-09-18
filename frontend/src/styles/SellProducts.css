@@ -1,0 +1,350 @@
+/* =========================
+   Main Page
+========================= */
+
+.sell-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f5f5;
+}
+
+.sell-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sell-title {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  color: #222;
+}
+
+.sell-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   AI / Manual Selection
+========================= */
+
+.sell-mode {
+  max-width: 650px;
+  margin: 40px auto 20px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sell-mode h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #222;
+}
+
+.sell-mode button {
+  padding: 12px 22px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.sell-mode button:first-of-type {
+  background: #002f34;
+  color: white;
+}
+
+.sell-mode button:last-of-type {
+  background: #e8e8e8;
+  color: #222;
+}
+
+.sell-mode button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   AI Input
+========================= */
+
+.sell-mode + div {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.sell-mode + div label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sell-mode + div textarea {
+  width: 100%;
+  min-height: 130px;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+
+.sell-mode + div textarea:focus {
+  border-color: #002f34;
+}
+
+.sell-mode + div button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #002f34;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sell-mode + div button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.sell-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #002f34;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+
+/* =========================
+   Generate Description Button
+========================= */
+
+.form-group textarea + button {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border: 1px solid #002f34;
+  border-radius: 6px;
+  background: white;
+  color: #002f34;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-group textarea + button:hover {
+  background: #002f34;
+  color: white;
+}
+
+.form-group textarea + button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   Images
+========================= */
+
+.image-help {
+  margin: 7px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.preview-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* X button inside top-right corner */
+
+.remove-image {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 5;
+}
+
+.remove-image:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================
+   Sell Button
+========================= */
+
+.sell-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #002f34;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sell-button:hover {
+  background: #00444a;
+}
+
+.sell-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .sell-page {
+    padding: 20px 12px;
+  }
+
+  .sell-card {
+    padding: 20px;
+  }
+
+  .sell-mode {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  .sell-mode button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .sell-mode + div {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  .sell-title {
+    font-size: 24px;
+  }
+
+  .image-preview {
+    gap: 10px;
+  }
+
+  .preview-item {
+    width: 85px;
+    height: 85px;
+  }
+}
