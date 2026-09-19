@@ -66,13 +66,29 @@ const getProducts = async (req, res) => {
     const filter = {};
 
     if (search) {
-      filter.title = {
-        $regex: search,
-        $options: "i",
-      };
+      filter.$or = [
+        {
+          title: {
+            $regex: search,
+            $options: "i",
+          },
+        },
+        {
+          description: {
+            $regex: search,
+            $options: "i",
+          },
+        },
+        {
+          category: {
+            $regex: search,
+            $options: "i",
+          },
+        },
+      ];
     }
 
-    if (category) {
+    if(category){
       filter.category = category;
     }
 
@@ -91,7 +107,7 @@ const getProducts = async (req, res) => {
     if (sort === "price_asc") {
       sortOption.price = 1;
     }
-    if (sort === "price_dec") {
+    if (sort === "price_desc") {
       sortOption.price = -1;
     }
     if (sort === "price_new") {

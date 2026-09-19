@@ -94,7 +94,7 @@ async function understandSearch(req, res) {
           "category": "",
           "minPrice": null,
           "maxPrice": null,
-          "sort": ""
+          "sort": null
         }
 
         Rules:
