@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import SellProducts from "./pages/SellProducts";
 import MyProducts from "./pages/MyProducts";
 import EditProduct from "./components/EditProduct";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -20,10 +21,12 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/sell" element={<SellProducts />} />
-        <Route path="/my-products" element={<MyProducts />} />
         <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/products/edit/:id" element={<EditProduct />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/sell" element={<SellProducts />} />
+          <Route path="/my-products" element={<MyProducts />} />
+          <Route path="/products/edit/:id" element={<EditProduct />} />
+        </Route>
       </Routes>
       <ToastContainer />
     </>

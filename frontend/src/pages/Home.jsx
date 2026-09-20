@@ -94,7 +94,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= CATEGORIES ================= */}
       <section className="categories-section">
         <div className="section-heading">
           <div>
@@ -124,7 +123,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= LATEST PRODUCTS ================= */}
       <section className="products-section">
         <div className="section-heading">
           <div>
@@ -167,7 +165,6 @@ function Home() {
         )}
       </section>
 
-      {/* ================= SELL CTA ================= */}
       <section className="sell-cta">
         <div className="sell-cta-content">
           <p className="section-label">HAVE SOMETHING TO SELL?</p>
@@ -185,7 +182,6 @@ function Home() {
         <div className="sell-cta-icon">💰</div>
       </section>
 
-      {/* ================= AI CHAT ================= */}
       <button
         className="ai-chat-button"
         onClick={() => setShowChat(true)}

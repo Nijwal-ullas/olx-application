@@ -142,3 +142,45 @@
     font-size: 28px;
   }
 }
+
+/* Profile Link */
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+/* Profile Circle */
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #002f34;
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: 2px solid #ffffff;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+
+.profile-link:hover .profile-icon {
+  background-color: #ffffff;
+  color: #002f34;
+  border: 2px solid #002f34;
+  transform: scale(1.05);
+}

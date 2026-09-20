@@ -14,15 +14,15 @@ function Navbar() {
     navigate("/login");
   }
 
+  const profileLetter = user?.name?.charAt(0).toUpperCase() || "U";
+
   return (
     <nav className="navbar">
-
       <Link to="/" className="navbar-logo">
         OLX
       </Link>
 
       <div className="navbar-links">
-
         <Link to="/" className="navbar-link">
           Home
         </Link>
@@ -51,6 +51,16 @@ function Navbar() {
               My Products
             </Link>
 
+            <Link
+              to="/profile"
+              className="profile-link"
+              title="View Profile"
+            >
+              <span className="profile-icon">
+                {profileLetter}
+              </span>
+            </Link>
+
             <button
               className="logout-button"
               onClick={handleLogout}
@@ -59,7 +69,6 @@ function Navbar() {
             </button>
           </>
         )}
-
       </div>
     </nav>
   );
